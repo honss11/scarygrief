@@ -1,5 +1,6 @@
 
-           <!DOCTYPE html>
+           
+        <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +40,7 @@
             flex: 1;
             width: 100%;
         }
-        /* Блок курса риликов */
+        /* Блок курса валют */
         .currency-box {
             background: linear-gradient(135deg, #1f6feb, #238636);
             border-radius: 12px;
@@ -54,9 +55,10 @@
             margin-bottom: 10px;
         }
         .currency-box p {
-            font-size: 18px;
+            font-size: 16px;
             color: #f0f6fc;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
         .shop-btn {
             background-color: #ffffff;
@@ -108,14 +110,22 @@
         .card-desc {
             font-size: 14px;
             color: #8b949e;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             flex: 1;
         }
         .card-price {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
             color: #f0f6fc;
-            margin-bottom: 15px;
+            margin-bottom: 6px;
+            background: #21262d;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .price-stars {
+            color: #e3b341;
         }
         .buy-btn {
             background: linear-gradient(90deg, #ff7b00, #ff5500);
@@ -129,6 +139,7 @@
             text-align: center;
             text-decoration: none;
             transition: opacity 0.2s;
+            margin-top: 15px;
         }
         .buy-btn:hover {
             opacity: 0.9;
@@ -152,11 +163,11 @@
     </header>
 
     <div class="container">
-        <!-- Блок курса риликов -->
+        <!-- Блок курса валют и оплаты звездами -->
         <div class="currency-box">
-            <h2>Курс валюты</h2>
-            <p>1 рилик = 0,5 рублей</p>
-            <a href="https://t.me/Govorat_Kripk" target="_blank" class="shop-btn">Купить рилики в ТГ</a>
+            <h2>Курс валют и способы оплаты</h2>
+            <p>1 рилик = 0,5 ₽ | 1 рилик = 0.25 ₴<br>⚡ Также доступна удобная оплата Telegram Stars (звёздами)! Быстро и без комиссии прямо в мессенджере.</p>
+            <a href="https://t.me/Govorat_Kripk" target="_blank" class="shop-btn">Купить в Telegram</a>
         </div>
 
         <div class="grid">
@@ -164,63 +175,91 @@
             <div class="card">
                 <div class="card-emoji">👑</div>
                 <div class="card-title">Owner</div>
-                <div class="card-desc">Максимальная донат-привилегия</div>
-                <div class="card-price">999 ₽</div>
-                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
+                <div class="card-desc">Максимальная донат-привилегия на сервере</div>
+                <div>
+                    <div class="card-price"><span>Рубли:</span> <span>999 ₽</span></div>
+                    <div class="card-price"><span>Гривны:</span> <span>450 ₴</span></div>
+                    <div class="card-price price-stars"><span>Звёзды (Stars):</span> <span>⭐ 350</span></div>
+                </div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">Купить в ТГ @Govorat_Kripk</a>
             </div>
 
             <!-- 2. Opka -->
             <div class="card">
                 <div class="card-emoji">⚡</div>
                 <div class="card-title">Op</div>
-                <div class="card-desc">Полные операторские права</div>
-                <div class="card-price">699 ₽</div>
-                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
+                <div class="card-desc">Полные операторские права и команды</div>
+                <div>
+                    <div class="card-price"><span>Рубли:</span> <span>699 ₽</span></div>
+                    <div class="card-price"><span>Гривны:</span> <span>320 ₴</span></div>
+                    <div class="card-price price-stars"><span>Звёзды (Stars):</span> <span>⭐ 250</span></div>
+                </div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">Купить в ТГ @Govorat_Kripk</a>
             </div>
 
             <!-- 3. D.Admin -->
             <div class="card">
                 <div class="card-emoji">🛡️</div>
-                <div class="card-title">D.Admin</div>
-                <div class="card-desc">Администраторские возможности</div>
-                <div class="card-price">499 ₽</div>
-                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
+                <div class="card-title">Admin</div>
+                <div class="card-desc">Администраторские возможности для порядка</div>
+                <div>
+                    <div class="card-price"><span>Рубли:</span> <span>499 ₽</span></div>
+                    <div class="card-price"><span>Гривны:</span> <span>230 ₴</span></div>
+                    <div class="card-price price-stars"><span>Звёзды (Stars):</span> <span>⭐ 180</span></div>
+                </div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">Купить в ТГ @Govorat_Kripk</a>
             </div>
 
-            <!-- 4. D.Gl.Moder-->
+            <!-- 4. D.Gl.Moder -->
             <div class="card">
                 <div class="card-emoji">⚔️</div>
                 <div class="card-title">D.Gl.Moder</div>
                 <div class="card-desc">Главный модератор сервера</div>
-                <div class="card-price">299 ₽</div>
-                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
+                <div>
+                    <div class="card-price"><span>Рубли:</span> <span>299 ₽</span></div>
+                    <div class="card-price"><span>Гривны:</span> <span>140 ₴</span></div>
+                    <div class="card-price price-stars"><span>Звёзды (Stars):</span> <span>⭐ 110</span></div>
+                </div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">Купить в ТГ @Govorat_Kripk</a>
             </div>
 
-            <!-- 5.  D.St.Moder -->
+            <!-- 5. D.St.Moder -->
             <div class="card">
                 <div class="card-emoji">🔨</div>
                 <div class="card-title">D.St.Moder</div>
-                <div class="card-desc">Старший модератор</div>
-                <div class="card-price">199 ₽</div>
-                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
+                <div class="card-desc">Старший модератор чата и игроков</div>
+                <div>
+                    <div class="card-price"><span>Рубли:</span> <span>199 ₽</span></div>
+                    <div class="card-price"><span>Гривны:</span> <span>95 ₴</span></div>
+                    <div class="card-price price-stars"><span>Звёзды (Stars):</span> <span>⭐ 75</span></div>
+                </div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">Купить в ТГ @Govorat_Kripk</a>
             </div>
 
             <!-- 6. D.Moder -->
             <div class="card">
                 <div class="card-emoji">💬</div>
                 <div class="card-title">D.Moder</div>
-                <div class="card-desc">Модератор чата и игроков</div>
-                <div class="card-price">149 ₽</div>
-                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
+                <div class="card-desc">Модератор для слежки за порядком</div>
+                <div>
+                    <div class="card-price"><span>Рубли:</span> <span>149 ₽</span></div>
+                    <div class="card-price"><span>Гривны:</span> <span>70 ₴</span></div>
+                    <div class="card-price price-stars"><span>Звёзды (Stars):</span> <span>⭐ 55</span></div>
+                </div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">Купить в ТГ @Govorat_Kripk</a>
             </div>
 
             <!-- 7. D.Helper -->
             <div class="card">
                 <div class="card-emoji">⭐</div>
-                <div class="card-title">D.Helper</div>
-                <div class="card-desc">Помощник для старта</div>
-                <div class="card-price">99 ₽</div>
-                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
+                <div class="card-title">Helper</div>
+                <div class="card-desc">Помощник для отличного старта</div>
+                <div>
+                    <div class="card-price"><span>Рубли:</span> <span>99 ₽</span></div>
+                    <div class="card-price"><span>Гривны:</span> <span>45 ₴</span></div>
+                    <div class="card-price price-stars"><span>Звёзды (Stars):</span> <span>⭐ 35</span></div>
+                </div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">Купить в ТГ @Govorat_Kripk</a>
             </div>
         </div>
     </div>
