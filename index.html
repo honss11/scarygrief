@@ -1,6 +1,6 @@
 
            
-              <!DOCTYPE html>
+             <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -40,6 +40,7 @@
             flex: 1;
             width: 100%;
         }
+        /* Блок курса риликов */
         .currency-box {
             background: linear-gradient(135deg, #1f6feb, #238636);
             border-radius: 12px;
@@ -74,6 +75,7 @@
             background-color: #f0f6fc;
             transform: translateY(-2px);
         }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -107,19 +109,16 @@
             border: 1px solid #30363d;
             z-index: 2;
         }
-        .card-image-container {
+        /* Блок вместо картинок со стильными символами */
+        .card-icon-container {
             width: 100%;
-            height: 220px;
-            background-color: #010409;
-            overflow: hidden;
+            height: 160px;
+            background: linear-gradient(135deg, #161b22, #21262d);
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        .card-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            font-size: 64px;
+            border-bottom: 1px solid #30363d;
         }
         .card-content {
             padding: 20px;
@@ -188,98 +187,84 @@
         </div>
 
         <div class="grid">
-            <!-- 1. Owner -->
+            <!-- 1. Овнер -->
             <div class="card">
                 <div class="discount-badge">-45%</div>
-                <div class="card-image-container">
-                    <img src="1.jfif" alt="Owner">
-                </div>
+                <div class="card-icon-container">👑</div>
                 <div class="card-content">
-                    <div class="card-title">Owner</div>
+                    <div class="card-title">Овнер</div>
                     <div class="card-desc">Максимальная донат-привилегия</div>
                     <div class="card-price">999 ₽</div>
                     <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
                 </div>
             </div>
 
-            <!-- 2. Op -->
+            <!-- 2. Опка -->
             <div class="card">
                 <div class="discount-badge">-45%</div>
-                <div class="card-image-container">
-                    <img src="2.jfif" alt="Op">
-                </div>
+                <div class="card-icon-container">⚡</div>
                 <div class="card-content">
-                    <div class="card-title">Op</div>
+                    <div class="card-title">Опка</div>
                     <div class="card-desc">Полные операторские права</div>
                     <div class="card-price">699 ₽</div>
                     <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
                 </div>
             </div>
 
-            <!-- 3. D. Admin -->
+            <!-- 3. Д. Админ -->
             <div class="card">
                 <div class="discount-badge">-45%</div>
-                <div class="card-image-container">
-                    <img src="3.jfif" alt="D. Admin">
-                </div>
+                <div class="card-icon-container">🛡️</div>
                 <div class="card-content">
-                    <div class="card-title">D. Admin</div>
+                    <div class="card-title">Д. Админ</div>
                     <div class="card-desc">Администраторские возможности</div>
                     <div class="card-price">499 ₽</div>
                     <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
                 </div>
             </div>
 
-            <!-- 4. D. Gl. Moder -->
+            <!-- 4. Д. Гл. Модер -->
             <div class="card">
                 <div class="discount-badge">-45%</div>
-                <div class="card-image-container">
-                    <img src="4.jfif" alt="D. Gl. Moder">
-                </div>
+                <div class="card-icon-container">⭐</div>
                 <div class="card-content">
-                    <div class="card-title">D. Gl. Moder</div>
+                    <div class="card-title">Д. Гл. Модер</div>
                     <div class="card-desc">Главный модератор сервера</div>
                     <div class="card-price">299 ₽</div>
                     <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
                 </div>
             </div>
 
-            <!-- 5. D. St. Moder -->
+            <!-- 5. Д. Ст. Модер -->
             <div class="card">
                 <div class="discount-badge">-45%</div>
-                <div class="card-image-container">
-                    <img src="5.jfif" alt="D. St. Moder">
-                </div>
+                <div class="card-icon-container">🔶</div>
                 <div class="card-content">
-                    <div class="card-title">D. St. Moder</div>
+                    <div class="card-title">Д. Ст. Модер</div>
                     <div class="card-desc">Старший модератор</div>
                     <div class="card-price">199 ₽</div>
                     <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
                 </div>
             </div>
 
-            <!-- 6. D. Moder -->
+            <!-- 6. Д. Модер -->
             <div class="card">
                 <div class="discount-badge">-45%</div>
-                <div class="card-image-container">
-                    <img src="6.jfif" alt="D. Moder">
-                </div>
+                <div class="card-icon-container">🔷</div>
                 <div class="card-content">
-                    <div class="card-title">D. Moder</div>
+                    <div class="card-title">Д. Модер</div>
                     <div class="card-desc">Модератор чата и игроков</div>
                     <div class="card-price">149 ₽</div>
                     <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
                 </div>
             </div>
 
-            <!-- 7. D. Helper -->
+            <!-- 7. Д. Хелпер -->
             <div class="card">
                 <div class="discount-badge">-45%</div>
-                <div class="card-image-container">
-                    <img src="7.jfif" alt="D. Helper">
-                </div>
+                <div class="card-icon-container">🔹</div>
                 <div class="card-content">
-                    <div class="card-title">D. Helper</div>
+                    <div class="card-title">Д. Хелпер</div>
                     <div class="card-desc">Помощник для старта</div>
                     <div class="card-price">99 ₽</div>
                     <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
