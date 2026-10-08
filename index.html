@@ -1,11 +1,10 @@
 
-           
-            <!DOCTYPE html>
+           <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScaryGrief - Магазин привилегий</title>
+    <title>Донат Магазин</title>
     <style>
         * {
             margin: 0;
@@ -13,295 +12,210 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
-            background-color: #0d0d0d;
-            color: #ffffff;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-
-        /* Шапка сайта */
         header {
-            background-color: #141414;
-            border-bottom: 1px solid #222;
-            padding: 15px 40px;
+            background-color: #161b22;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #30363d;
         }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-box {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, #ef4444, #b91c1c);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .logo {
+            font-size: 24px;
             font-weight: bold;
-            font-size: 20px;
-            color: #fff;
+            color: #58a6ff;
         }
-
-        .logo-text h1 {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .logo-text p {
-            font-size: 12px;
-            color: #888;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #aaa;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        nav a:hover, nav a.active {
-            color: #fff;
-        }
-
-        .online-status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #1c1c1c;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 13px;
-        }
-
-        .dot {
-            width: 9px;
-            height: 9px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #22c55e;
-        }
-
-        /* Основной контент */
         .container {
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 22px;
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-
-        /* Сетка товаров */
-        .shop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background-color: #141414;
-            border: 1px solid #222;
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            border-color: #333;
-            transform: translateY(-3px);
-        }
-
-        .card-image {
-            height: 160px;
-            background: linear-gradient(135deg, #1f2937, #111827);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            font-size: 40px;
-        }
-
-        .badge-discount {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: #111;
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: bold;
-            border: 1px solid #333;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .card-desc {
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 15px;
-        }
-
-        .card-price {
-            font-size: 16px;
-            font-weight: bold;
-            color: #f97316;
-            margin-bottom: 15px;
-        }
-
-        /* Кнопка связи в ТГ */
-        .buy-btn {
-            display: block;
+            flex: 1;
             width: 100%;
-            background: linear-gradient(135deg, #f97316, #ea580c);
-            color: white;
+        }
+        .currency-box {
+            background: linear-gradient(135deg, #1f6feb, #238636);
+            border-radius: 12px;
+            padding: 25px;
             text-align: center;
-            padding: 12px;
-            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .currency-box h2 {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .currency-box p {
+            font-size: 18px;
+            color: #f0f6fc;
+            margin-bottom: 20px;
+        }
+        .shop-btn {
+            background-color: #ffffff;
+            color: #238636;
+            padding: 12px 30px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 13px;
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+            font-size: 16px;
+            transition: 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .shop-btn:hover {
+            background-color: #f0f6fc;
+            transform: translateY(-2px);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 25px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: #58a6ff;
+        }
+        .card-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #f0f6fc;
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+        .card-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f0f6fc;
+            margin-bottom: 15px;
+        }
+        .buy-btn {
+            background: linear-gradient(90deg, #ff7b00, #ff5500);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
             transition: opacity 0.2s;
         }
-
         .buy-btn:hover {
             opacity: 0.9;
+        }
+        footer {
+            background-color: #161b22;
+            border-top: 1px solid #30363d;
+            padding: 20px;
+            text-align: center;
+            color: #8b949e;
+            font-size: 14px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Шапка -->
     <header>
-        <div class="logo-area">
-            <div class="logo-box">SG</div>
-            <div class="logo-text">
-                <h1>ScaryGrief</h1>
-                <p>Официальный магазин</p>
-            </div>
-        </div>
-        <nav>
-            <a href="#" class="active">ГЛАВНАЯ</a>
-            <a href="#">МАГАЗИН</a>
-        </nav>
-        <div class="online-status">
-            <div class="dot"></div>
-            <span>Онлайн</span>
-        </div>
+        <div class="logo">Донат Сервер</div>
+        <nav></nav>
     </header>
 
-    <!-- Каталог товаров -->
     <div class="container">
-        <h2 class="section-title">Привилегии (ГРИФ #1)</h2>
-        
-        <div class="shop-grid">
-            
-            <!-- Owner -->
+        <!-- Блок курса риликов -->
+        <div class="currency-box">
+            <h2>Курс валюты</h2>
+            <p>1 рилик = 0,5 рублей</p>
+            <a href="https://t.me/Govorat_Kripk" target="_blank" class="shop-btn">Купить рилики в ТГ</a>
+        </div>
+
+        <div class="grid">
+            <!-- 1. Овнер -->
             <div class="card">
-                <div class="card-image"><div class="badge-discount">-45%</div>👑</div>
-                <div class="card-content">
-                    <div class="card-title">Owner</div>
-                    <div class="card-desc">Максимальная привилегия на сервере</div>
-                    <div class="card-price">899 ₽</div>
-                    <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
-                </div>
+                <div class="card-title">Овнер</div>
+                <div class="card-desc">Максимальная донат-привилегия</div>
+                <div class="card-price">999 ₽</div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
             </div>
 
-            <!-- Opka -->
+            <!-- 2. Опка -->
             <div class="card">
-                <div class="card-image"><div class="badge-discount">-45%</div>⚡</div>
-                <div class="card-content">
-                    <div class="card-title">Opka</div>
-                    <div class="card-desc">Крутой донат с привилегиями</div>
-                    <div class="card-price">639 ₽</div>
-                    <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
-                </div>
+                <div class="card-title">Опка</div>
+                <div class="card-desc">Полные операторские права</div>
+                <div class="card-price">699 ₽</div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
             </div>
 
-            <!-- D. Admin -->
+            <!-- 3. Д. Админ -->
             <div class="card">
-                <div class="card-image"><div class="badge-discount">-45%</div>🛡️</div>
-                <div class="card-content">
-                    <div class="card-title">D. Admin</div>
-                    <div class="card-desc">Админские возможности</div>
-                    <div class="card-price">429 ₽</div>
-                    <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
-                </div>
+                <div class="card-title">Д. Админ</div>
+                <div class="card-desc">Администраторские возможности</div>
+                <div class="card-price">499 ₽</div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
             </div>
 
-            <!-- D. Glmoder -->
+            <!-- 4. Д. Гл. Модер -->
             <div class="card">
-                <div class="card-image"><div class="badge-discount">-45%</div>⚔️</div>
-                <div class="card-content">
-                    <div class="card-title">D. Glmoder</div>
-                    <div class="card-desc">Главный модератор сервера</div>
-                    <div class="card-price">349 ₽</div>
-                    <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
-                </div>
+                <div class="card-title">Д. Гл. Модер</div>
+                <div class="card-desc">Главный модератор сервера</div>
+                <div class="card-price">299 ₽</div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
             </div>
 
-            <!-- D. Stmoder -->
+            <!-- 5. Д. Ст. Модер -->
             <div class="card">
-                <div class="card-image"><div class="badge-discount">-45%</div>🔨</div>
-                <div class="card-content">
-                    <div class="card-title">D. Stmoder</div>
-                    <div class="card-desc">Старший модератор</div>
-                    <div class="card-price">259 ₽</div>
-                    <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
-                </div>
+                <div class="card-title">Д. Ст. Модер</div>
+                <div class="card-desc">Старший модератор</div>
+                <div class="card-price">199 ₽</div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
             </div>
 
-            <!-- D. Moder -->
+            <!-- 6. Д. Модер -->
             <div class="card">
-                <div class="card-image"><div class="badge-discount">-45%</div>⭐</div>
-                <div class="card-content">
-                    <div class="card-title">D. Moder</div>
-                    <div class="card-desc">Модератор сервера</div>
-                    <div class="card-price">199 ₽</div>
-                    <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
-                </div>
+                <div class="card-title">Д. Модер</div>
+                <div class="card-desc">Модератор чата и игроков</div>
+                <div class="card-price">149 ₽</div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
             </div>
 
-            <!-- D. Helper -->
+            <!-- 7. Д. Хелпер -->
             <div class="card">
-                <div class="card-image"><div class="badge-discount">-45%</div>📘</div>
-                <div class="card-content">
-                    <div class="card-title">D. Helper</div>
-                    <div class="card-desc">Помощник для старта</div>
-                    <div class="card-price">99 ₽</div>
-                    <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
-                </div>
+                <div class="card-title">Д. Хелпер</div>
+                <div class="card-desc">Помощник для старта</div>
+                <div class="card-price">99 ₽</div>
+                <a href="https://t.me/Govorat_Kripk" target="_blank" class="buy-btn">за покупкой в тг @Govorat_Kripk</a>
             </div>
-
         </div>
     </div>
+
+    <footer>
+        Связь с создателем сайта ДС: honss11
+    </footer>
 
 </body>
 </html>
